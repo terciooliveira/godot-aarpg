@@ -1,0 +1,50 @@
+{
+	"categories": [
+		{
+			"uuid": "989d265f-a694-4fbf-8d98-e0ff5f9ccf94",
+			"title": "Task",
+			"color": "73bfff"
+		}
+	],
+	"stages": [
+		{
+			"uuid": "5751166f-0ff3-4d27-add7-5b78d434ba61",
+			"title": "Todo",
+			"tasks": [
+				"c8bff5f5-bd68-4c0f-88b2-362aab0c9ca2"
+			]
+		},
+		{
+			"uuid": "2dac12a1-16c5-4c44-8425-36aff584adaa",
+			"title": "Doing",
+			"tasks": []
+		},
+		{
+			"uuid": "75a438f2-2555-4bc7-9f2f-72a1986b3c30",
+			"title": "Done",
+			"tasks": []
+		}
+	],
+	"tasks": [
+		{
+			"uuid": "c8bff5f5-bd68-4c0f-88b2-362aab0c9ca2",
+			"title": "Adicionar limites no mapa - player cai fora.",
+			"description": "",
+			"category": "989d265f-a694-4fbf-8d98-e0ff5f9ccf94",
+			"steps": []
+		}
+	],
+	"layout": {
+		"columns": [
+			[
+				"5751166f-0ff3-4d27-add7-5b78d434ba61"
+			],
+			[
+				"2dac12a1-16c5-4c44-8425-36aff584adaa"
+			],
+			[
+				"75a438f2-2555-4bc7-9f2f-72a1986b3c30"
+			]
+		]
+	}
+}
