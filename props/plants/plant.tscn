@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://6hg1arena4gk"]
+[gd_scene load_steps=8 format=3 uid="uid://6hg1arena4gk"]
 
 [ext_resource type="Script" path="res://props/plants/plant.gd" id="1_b6py4"]
 [ext_resource type="Texture2D" uid="uid://dxw55t28au271" path="res://props/sprites/Props.png" id="1_enxv4"]
@@ -6,6 +6,66 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bd3lv"]
 size = Vector2(24, 16)
+
+[sub_resource type="Animation" id="Animation_xodr8"]
+resource_name = "plant-killed"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:vframes")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [3, 33]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vobib"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:vframes")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nh1un"]
+_data = {
+"RESET": SubResource("Animation_vobib"),
+"plant-killed": SubResource("Animation_xodr8")
+}
 
 [node name="Plant" type="Node2D"]
 script = ExtResource("1_b6py4")
@@ -31,3 +91,8 @@ collision_mask = 0
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_bd3lv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_nh1un")
+}
