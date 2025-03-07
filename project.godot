@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 LevelManager="*res://00_Globals/global_level_manager.gd"
 PlayerHud="*res://GUI/player_hud/player_hud.tscn"
 PlayerManager="*res://00_Globals/global_player_manager.gd"
+SceneTransition="*res://GUI/scene_transition/scene_transition.tscn"
 
 [display]
 
@@ -34,7 +35,7 @@ project/assembly_name="AARPG-2025-01"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/kanban_tasks/plugin.cfg")
+enabled=PackedStringArray()
 
 [input]
 
